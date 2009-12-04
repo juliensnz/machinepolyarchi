@@ -1,5 +1,0 @@
-setlr
-read r1
-load r0, 9
-pow r0, r1, r2
-pow r3, r2, -9
