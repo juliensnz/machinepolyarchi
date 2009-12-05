@@ -1,6 +1,7 @@
 #include "Parser.hpp"
 #include "Assembler.hpp"
 #include <iostream>
+#include <iomanip>
 #include <fstream>
 #include <sstream>
 #include <map>
@@ -8,52 +9,38 @@
 
 using namespace std;
 
-
-
 void parseFile(string path, string input, string *output){
     string inputPath = path + input;
+	//Chemin + nom du fichier entrée
     string outputPath = (output) ? (path + *output) : (path + input + "_asm");
-	map <string, string> translate, reg, binToHex;
+	//Si output est défini, chemin + nom fichier sortie,
+	//Sinon chemin + nom du fichier entrée + _asm
+	map <string, int> opcodeToInt, regToInt;
 	
-	translate["load"]    = "0000";
-	translate["read"]    = "0001";
-	translate["print"]   = "0010";
-	translate["pow"]     = "0011";
-	translate["daxpy"]   = "0101";
-	translate["setlr"]   = "0110";
-	translate["resetlr"] = "0111";
-	translate["loop"]    = "1000";
-	translate["end"]     = "1001";
-	
-	reg[""]   = "000";
-	reg["r0"] = "001";
-	reg["r1"] = "010";
-	reg["r2"] = "011";
-	reg["r3"] = "100";
-	reg["r4"] = "101";
-	
-	binToHex["0000"] = "0";
-	binToHex["0001"] = "1";
-	binToHex["0010"] = "2";
-	binToHex["0011"] = "3";
-	binToHex["0100"] = "4";
-	binToHex["0101"] = "5";
-	binToHex["0110"] = "6";
-	binToHex["0111"] = "7";
-	binToHex["1000"] = "8";
-	binToHex["1001"] = "9";
-	binToHex["1010"] = "A";
-	binToHex["1011"] = "B";
-	binToHex["1100"] = "C";
-	binToHex["1101"] = "D";
-	binToHex["1110"] = "E";
-	binToHex["1111"] = "F";
-
-    if (!inputPath.empty()) {
+	if (!inputPath.empty()) {
+		opcodeToInt["load"]    = 0;
+		opcodeToInt["read"]    = 1;
+		opcodeToInt["print"]   = 2;
+		opcodeToInt["pow"]     = 3;
+		opcodeToInt["daxpy"]   = 5;
+		opcodeToInt["setlr"]   = 6;
+		opcodeToInt["resetlr"] = 7;
+		opcodeToInt["loop"]    = 8;
+		opcodeToInt["end"]     = 9;
+		
+		regToInt[""]   = 0;
+		regToInt["r0"] = 1;
+		regToInt["r1"] = 2;
+		regToInt["r2"] = 3;
+		regToInt["r3"] = 4;
+		regToInt["r4"] = 5;
+		//Deux dictionnaires de conversion
+		
     	ifstream inputFile(inputPath.c_str(), ios::in);
     	ofstream outputFile(outputPath.c_str(), ios::out | ios::trunc);
+		//Ouverture des deux fichiers
     	if(inputFile && outputFile){
-    	    string line, etq, cmd, ri, rj, rk, c, code;
+    	    string line, etq, cmd, ri, rj, rk, nc;
     	    int nbLigne = 0;
 			map <string, int> etiquettes;
 
@@ -73,8 +60,8 @@ void parseFile(string path, string input, string *output){
     	        getline(inputFile, line);
     	        if (!line.empty()){
 					nbLigne++;
-					parse(&line, &etq, &cmd, &ri, &rj, &rk, &c);
-					outputFile << '$' << convert(cmd, ri, rj, rk, c, translate, reg, binToHex, etiquettes, nbLigne) << endl;
+					parse(&line, &etq, &cmd, &ri, &rj, &rk, &nc);
+					outputFile << "0x" << setfill('0') << setw(8) << hex << convert(cmd, ri, rj, rk, nc, opcodeToInt, regToInt, etiquettes, nbLigne) << endl;
 				}
     	    }
         inputFile.close();
@@ -87,38 +74,43 @@ void parseFile(string path, string input, string *output){
     	cerr << "Pas de chemin de fichier" << endl;
 }
 
-string convert(string commande,
-			   string ri,
-			   string rj,
-			   string rk,
-			   string nc,
-			   map <string, string> translate,
-			   map <string, string> reg,
-			   map <string, string> binToHex,
-			   map <string, int> etiquettes,
-			   int currLine){
-	string result;
+unsigned int convert(string commande,
+					 string ri,
+					 string rj,
+					 string rk,
+					 string nc,
+					 map <string, int> opcodeToInt,
+					 map <string, int> regToInt,
+					 map <string, int> etiquettes,
+					 int currLine){
 	
-	result = translate[commande];
+	unsigned int result = opcodeToInt[commande];
 	
-	if (result == "0011" && nc.empty()){
-		result = "0100";
-	}	
-	if (result == "1000"){
+	if (result == 3 && nc.empty())
+		result = 4;
+	else if (result == 8){
 		//Gérer le loop
 	}
-	result += reg[ri];
-	result += reg[rj];
-	result += reg[rk];
-	result += toBin(nc);
-	result += "00000000000";
-	result = toHex(result, binToHex);
-	
+	cout << hex << result << endl;
+	result <<= 3;
+	//Probleme avec l'opcode 0, decalage de 0 = 0
+	cout << hex << result << endl;
+	result += regToInt[ri];
+	result <<= 3;
+	cout << hex << result << endl;
+	result += regToInt[rj];
+	result <<= 3;
+	cout << hex << result << endl;
+	result += regToInt[rk];
+	result <<= 8;
+	cout << hex << result << endl;
+	result += (0x000000ff & toBin(nc));
+	result <<= 11;
+	cout << hex << result << endl;
 	return result;
 }
 
-string toBin(string s){
-	string result;
+int toBin(string s){
 	int c;
 	if (!s.empty()) {
 		istringstream iss (s);
@@ -130,22 +122,7 @@ string toBin(string s){
 			(unsigned int) c;
 			iss >> c;
 		}
-		for (int i = 31; i >= 0; i--) {
-			result += (((c >> i) & 1) ? "1" : "0");
-		}
-		return result.substr(result.size() - 8, 8);
+		return c;
 	}
-	else return "00000000";
-}
-
-string toHex(string s, map <string, string> binToHex){
-	string result;
-	
-	if (s.size()%4 == 0) {
-		while (!s.empty()) {
-			result += binToHex[s.substr(0, 4)];
-			s.erase(0, 4);
-		}
-	}
-	return result;
+	else return 0;
 }

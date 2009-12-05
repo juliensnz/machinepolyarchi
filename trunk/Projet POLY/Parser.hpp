@@ -2,7 +2,6 @@
 #define PARSER_HPP
 
 #include <string>
-#include <map>
 
 void parse(std::string *instruction,
 		   std::string *etiquette,
