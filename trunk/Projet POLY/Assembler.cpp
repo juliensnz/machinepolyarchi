@@ -94,6 +94,7 @@ unsigned int convert(string commande,
 	cout << hex << result << endl;
 	result <<= 3;
 	//Probleme avec l'opcode 0, decalage de 0 = 0
+	//Réglé a l'écriture dans le fichier
 	cout << hex << result << endl;
 	result += regToInt[ri];
 	result <<= 3;
