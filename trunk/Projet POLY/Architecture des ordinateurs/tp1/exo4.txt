@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+int main (int argc, const char * argv[]) {
+	int operand1,operand2,resultat;
+	char signe;
+	printf("Veuilez entrer votre opération : ");
+	scanf("%d %c %d",&operand1,&signe,&operand2);
+	switch (signe) {
+		case '+':
+			resultat = operand1+operand2;
+			break;
+		case '-':
+			resultat = operand1-operand2;
+			break;
+		case '*':
+			resultat = operand1*operand2;
+			break;
+		case '/':
+			resultat = operand1/operand2;
+			break;
+		default:
+			printf("Vous n'avez pas entré de symbole valide");
+			return 1;
+			break;
+	}
+	printf("resultat : %d",resultat);
+}

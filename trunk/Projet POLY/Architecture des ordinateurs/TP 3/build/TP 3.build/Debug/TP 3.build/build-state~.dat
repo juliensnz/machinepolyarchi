@@ -1,0 +1,63 @@
+TTP 3
+v7
+r0
+t277799972.186767
+cCheck dependencies
+cCompileC "build/TP 3.build/Debug/TP 3.build/Objects-normal/i386/main.o" "/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c" normal i386 c com.apple.compilers.gcc.4_2
+
+N/Developer/SDKs/MacOSX10.5.sdk
+c000000004A49A9E400000000000000EE
+t1246341604
+s238
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/stdio.h
+c0000000047BA99310000000000003D1D
+t1203411249
+s15645
+
+N/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/build/Debug/TP 3
+t2
+s0
+
+N/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/build/TP 3.build/Debug/TP 3.build/Objects-normal/i386/TP 3.LinkFileList
+c000000004ADEACA30000000000000089
+t1256107171
+s137
+
+N/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/build/TP 3.build/Debug/TP 3.build/Objects-normal/i386/main.o
+t2
+s0
+
+N/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c
+c000000004ADEACA30000000000000248
+t1256107171
+s584
+i<stdio.h>
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies277799971#277799971#0(0"0(0#1#0"7947009927035180032#0"0#
+
+CCompileC "build/TP 3.build/Debug/TP 3.build/Objects-normal/i386/main.o" "/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c" normal i386 c com.apple.compilers.gcc.4_2
+s277799971.620948
+e277799972.186663
+r0
+xCompileC
+xbuild/TP 3.build/Debug/TP 3.build/Objects-normal/i386/main.o
+x/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+o/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c:6: error: expected declaration specifiers or '...' before 'shorting'
+o/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c:17: error: expected declaration specifiers or '...' before 'shorting'
+o/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c: In function 'separer':
+o/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c:22: error: invalid operands to binary * (have 'int' and 'byte *')
+o/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c:23: error: 'cst' undeclared (first use in this function)
+o/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c:23: error: (Each undeclared identifier is reported only once
+o/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c:23: error: for each function it appears in.)
+lSLF07#2@90"Compile /Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c277799971#277799972#0(973"/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c:6: error: expected declaration specifiers or '...' before 'shorting'/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c:17: error: expected declaration specifiers or '...' before 'shorting'/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c: In function 'separer':/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c:22: error: invalid operands to binary * (have 'int' and 'byte *')/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c:23: error: 'cst' undeclared (first use in this function)/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c:23: error: (Each undeclared identifier is reported only once/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c:23: error: for each function it appears in.)4(4@58"Expected declaration specifiers or '...' before 'shorting'277799972#0#152#0(6@82"/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c277799971#6#0#6#0#19"expected * before *0(4@58"Expected declaration specifiers or '...' before 'shorting'277799972#152#153#0(6@82"/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c277799971#17#0#17#0#19"expected * before *0(4@54"Invalid operands to binary * (have 'int' and 'byte *')277799972#412#149#0(6@82"/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c277799971#22#0#22#0#0"0(4@45"'cst' undeclared (first use in this function)277799972#561#140#0(6@82"/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c277799971#23#0#23#0#43"'*' undeclared (first use in this function)0(0#0#82"/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c7306000115585872896#1637"    cd "/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/build/TP 3.build/Debug/TP 3.build/TP 3-generated-files.hmap" "-I/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/build/TP 3.build/Debug/TP 3.build/TP 3-own-target-headers.hmap" "-I/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/build/TP 3.build/Debug/TP 3.build/TP 3-all-target-headers.hmap" -iquote "/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/build/TP 3.build/Debug/TP 3.build/TP 3-project-headers.hmap" "-F/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/build/Debug" "-I/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/build/Debug/include" "-I/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/build/TP 3.build/Debug/TP 3.build/DerivedSources/i386" "-I/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/build/TP 3.build/Debug/TP 3.build/DerivedSources" -c "/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/main.c" -o "/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/build/TP 3.build/Debug/TP 3.build/Objects-normal/i386/main.o"1#
+
+CLd "/Users/Hoki/Documents/Cours Semestre 3/Architecture des ordinateurs/TP/TP 3/build/Debug/TP 3" normal i386
+r0
+

@@ -1,0 +1,76 @@
+Ttp1
+v7
+r0
+t275379442.819127
+cCheck dependencies
+cCompileC build/tp1.build/Debug/tp1.build/Objects-normal/i386/main.o /Users/julien/projet/Xcode/archi/tp1/main.c normal i386 c com.apple.compilers.gcc.4_2
+cLd /Users/julien/projet/Xcode/archi/tp1/build/Debug/tp1 normal i386
+
+N/Developer/SDKs/MacOSX10.5.sdk
+c000000004AB0D9D700000000000000EE
+t1253104087
+s238
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/stdio.h
+c0000000047BA99310000000000003D1D
+t1203411249
+s15645
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004AB0D9EF00000000000000EE
+t1253104111
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdio.h
+c000000004A5C14A70000000000004174
+t1247548583
+s16756
+
+N/Users/julien/projet/Xcode/archi/tp1/build/Debug/tp1
+t1253686642
+s8916
+
+N/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Debug/tp1.build/Objects-normal/i386/main.o
+t1253686642
+s2364
+
+N/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Debug/tp1.build/Objects-normal/i386/tp1.LinkFileList
+c000000004AB9BB8D0000000000000060
+t1253686157
+s96
+
+N/Users/julien/projet/Xcode/archi/tp1/main.c
+c000000004AB9BD6F00000000000000AF
+t1253686639
+s175
+i<stdio.h>
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies275379442#275379442#0(0"0(0#1#0"2438057280#0"0#
+
+CCompileC build/tp1.build/Debug/tp1.build/Objects-normal/i386/main.o /Users/julien/projet/Xcode/archi/tp1/main.c normal i386 c com.apple.compilers.gcc.4_2
+s275379442.558319
+e275379442.592213
+r1
+xCompileC
+xbuild/tp1.build/Debug/tp1.build/Objects-normal/i386/main.o
+x/Users/julien/projet/Xcode/archi/tp1/main.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+o/Users/julien/projet/Xcode/archi/tp1/main.c: In function 'main':
+o/Users/julien/projet/Xcode/archi/tp1/main.c:6: warning: format '%d' expects type 'int *', but argument 2 has type 'int'
+lSLF07#2@51"Compile /Users/julien/projet/Xcode/archi/tp1/main.c275379442#275379442#0(185"/Users/julien/projet/Xcode/archi/tp1/main.c: In function 'main':/Users/julien/projet/Xcode/archi/tp1/main.c:6: warning: format '%d' expects type 'int *', but argument 2 has type 'int'1(22@63"Format '%d' expects type 'int *', but argument 2 has type 'int'275379442#65#120#0(6@43"/Users/julien/projet/Xcode/archi/tp1/main.c275379439#6#0#6#0#56"format '*' expects type '*', but argument * has type '*'0(0#0#43"/Users/julien/projet/Xcode/archi/tp1/main.c2438057280#1168"    cd /Users/julien/projet/Xcode/archi/tp1    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Debug/tp1.build/tp1-generated-files.hmap -I/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Debug/tp1.build/tp1-own-target-headers.hmap -I/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Debug/tp1.build/tp1-all-target-headers.hmap -iquote /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Debug/tp1.build/tp1-project-headers.hmap -F/Users/julien/projet/Xcode/archi/tp1/build/Debug -I/Users/julien/projet/Xcode/archi/tp1/build/Debug/include -I/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Debug/tp1.build/DerivedSources/i386 -I/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Debug/tp1.build/DerivedSources -c /Users/julien/projet/Xcode/archi/tp1/main.c -o /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Debug/tp1.build/Objects-normal/i386/main.o0#
+
+CLd /Users/julien/projet/Xcode/archi/tp1/build/Debug/tp1 normal i386
+s275379442.592301
+e275379442.819077
+r1
+xLd
+x/Users/julien/projet/Xcode/archi/tp1/build/Debug/tp1
+xnormal
+xi386
+lSLF07#2@57"Link /Users/julien/projet/Xcode/archi/tp1/build/Debug/tp1275379442#275379442#0(0"0(0#0#0"2438057280#468"    cd /Users/julien/projet/Xcode/archi/tp1    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/julien/projet/Xcode/archi/tp1/build/Debug -F/Users/julien/projet/Xcode/archi/tp1/build/Debug -filelist /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Debug/tp1.build/Objects-normal/i386/tp1.LinkFileList -mmacosx-version-min=10.6 -o /Users/julien/projet/Xcode/archi/tp1/build/Debug/tp10#
+

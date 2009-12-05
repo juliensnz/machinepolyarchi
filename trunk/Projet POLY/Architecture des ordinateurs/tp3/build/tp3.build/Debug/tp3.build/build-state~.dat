@@ -1,0 +1,86 @@
+Ttp3
+v7
+r0
+t277801851.030674
+cCheck dependencies
+cCompileC build/tp3.build/Debug/tp3.build/Objects-normal/i386/main.o "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/main.c" normal i386 c com.apple.compilers.gcc.4_2
+cCompileC build/tp3.build/Debug/tp3.build/Objects-normal/i386/separer.o "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/separer.c" normal i386 c com.apple.compilers.gcc.4_2
+
+N/Developer/SDKs/MacOSX10.5.sdk
+c000000004AB0D9D700000000000000EE
+t1253104087
+s238
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/stdio.h
+c0000000047BA99310000000000003D1D
+t1203411249
+s15645
+
+N/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/Debug/tp3
+t2
+s0
+
+N/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/tp3.build/Debug/tp3.build/Objects-normal/i386/main.o
+t1256109051
+s2084
+
+N/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/tp3.build/Debug/tp3.build/Objects-normal/i386/separer.o
+t2
+s0
+
+N/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/tp3.build/Debug/tp3.build/Objects-normal/i386/tp3.LinkFileList
+c000000004ADEB3FA0000000000000121
+t1256109050
+s289
+
+N/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/main.c
+c000000004ADEB2C3000000000000005A
+t1256108739
+s90
+i<stdio.h>
+
+N/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/separer.c
+c000000004ADEB30000000000000001B8
+t1256108800
+s440
+i"separer.h"
+
+N/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/separer.h
+c000000004ADEB2D0000000000000008A
+t1256108752
+s138
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies277801850#277801850#0(0"0(0#1#0"7947009927035180032#0"0#
+
+CCompileC build/tp3.build/Debug/tp3.build/Objects-normal/i386/main.o "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/main.c" normal i386 c com.apple.compilers.gcc.4_2
+s277801850.291774
+e277801851.030571
+r1
+xCompileC
+xbuild/tp3.build/Debug/tp3.build/Objects-normal/i386/main.o
+x/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/main.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@98"Compile /Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/main.c277801850#277801851#0(0"0(0#0#90"/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/main.c8027224646438048768#1707"    cd "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/tp3.build/Debug/tp3.build/tp3-generated-files.hmap" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/tp3.build/Debug/tp3.build/tp3-own-target-headers.hmap" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/tp3.build/Debug/tp3.build/tp3-all-target-headers.hmap" -iquote "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/tp3.build/Debug/tp3.build/tp3-project-headers.hmap" "-F/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/Debug" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/Debug/include" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/tp3.build/Debug/tp3.build/DerivedSources/i386" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/tp3.build/Debug/tp3.build/DerivedSources" -c "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/main.c" -o "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/tp3.build/Debug/tp3.build/Objects-normal/i386/main.o"0#
+
+CCompileC build/tp3.build/Debug/tp3.build/Objects-normal/i386/separer.o "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/separer.c" normal i386 c com.apple.compilers.gcc.4_2
+s277801850.731711
+e277801851.027141
+r0
+xCompileC
+xbuild/tp3.build/Debug/tp3.build/Objects-normal/i386/separer.o
+x/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/separer.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+o/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/separer.c:12: error: expected ')' before 'instr'
+lSLF07#2@101"Compile /Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/separer.c277801850#277801851#0(133"/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/separer.c:12: error: expected ')' before 'instr'1(4@27"Expected ')' before 'instr'277801850#0#133#0(6@93"/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/separer.c277801600#12#0#12#0#19"expected * before *0(0#0#93"/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/separer.c4300882208#1713"    cd "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/tp3.build/Debug/tp3.build/tp3-generated-files.hmap" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/tp3.build/Debug/tp3.build/tp3-own-target-headers.hmap" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/tp3.build/Debug/tp3.build/tp3-all-target-headers.hmap" -iquote "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/tp3.build/Debug/tp3.build/tp3-project-headers.hmap" "-F/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/Debug" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/Debug/include" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/tp3.build/Debug/tp3.build/DerivedSources/i386" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/tp3.build/Debug/tp3.build/DerivedSources" -c "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/separer.c" -o "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/tp3.build/Debug/tp3.build/Objects-normal/i386/separer.o"1#
+
+CLd "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/tp3/build/Debug/tp3" normal i386
+r0
+
