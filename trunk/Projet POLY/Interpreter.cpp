@@ -43,7 +43,7 @@ void execMemory(unsigned int* memory){
 				registres[ri] = nc;
 				break;
 			case 1: //Read ri
-					//registres[ri] = getInt();
+				registres[ri] = getInt();
 				break;
 			case 2:
 				cout << setw(3) << setfill('0') << registres[ri];
@@ -77,4 +77,14 @@ void execMemory(unsigned int* memory){
 				break;
 		}
 	}	
+}
+
+int getInt(){
+	int i;
+	cout << "Veuillez entrer un entier" << endl;
+	cin >> i;
+	if (i < -255 || i > 255)
+		return getInt();
+	else
+		return i;
 }
