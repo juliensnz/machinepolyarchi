@@ -14,6 +14,6 @@ unsigned int convert(std::string commande,
 					 std::map <std::string, int> regToInt,
 					 std::map <std::string, int> etiquettes,
 					 int currLine);
-int toBin(std::string s);
+int toInt(std::string s);
 
 #endif // ASSEMBLER_HPP

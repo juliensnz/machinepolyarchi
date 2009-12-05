@@ -49,7 +49,10 @@ void parseFile(string path, string input, string *output){
 				if (!line.empty()){
 					nbLigne++;
 					getEtiq(&line, &etq);
-					etiquettes[etq] = nbLigne;
+					if (!etq.empty())
+						etiquettes[etq] = nbLigne;
+					
+					cout << etq << " : " << etiquettes[etq] << endl;
 				}
 			}
 			inputFile.clear();
@@ -89,7 +92,12 @@ unsigned int convert(string commande,
 	if (result == 3 && nc.empty())
 		result = 4;
 	else if (result == 8){
-		//Gérer le loop
+		if (!isInt(&rj)){
+			int i = etiquettes[rj] - currLine;
+			stringstream iss;
+			iss << i;
+			iss >> rj;
+		}
 	}
 	cout << hex << result << endl;
 	result <<= 3;
@@ -105,13 +113,13 @@ unsigned int convert(string commande,
 	result += regToInt[rk];
 	result <<= 8;
 	cout << hex << result << endl;
-	result += (0x000000ff & toBin(nc));
+	result += (0x000000ff & toInt(nc));
 	result <<= 11;
 	cout << hex << result << endl;
 	return result;
 }
 
-int toBin(string s){
+int toInt(string s){
 	int c;
 	if (!s.empty()) {
 		istringstream iss (s);
