@@ -1,142 +1,0 @@
-Tpoly
-v7
-r0
-t280827013.417443
-cCheck dependencies
-cCompileC build/poly.build/Debug/poly.build/Objects-normal/i386/main.o "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/main.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
-cCompileC build/poly.build/Debug/poly.build/Objects-normal/i386/assembleur.o "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/assembleur.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
-cCompileC build/poly.build/Debug/poly.build/Objects-normal/i386/poly_parser.o "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/../../../../../../../../../Downloads/09-11/poly_parser.c" normal i386 c com.apple.compilers.gcc.4_2
-cLd "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/Debug/poly" normal i386
-
-N/Developer/SDKs/MacOSX10.5.sdk
-c000000004AB0D9D700000000000000EE
-t1253104087
-s238
-
-N/Developer/SDKs/MacOSX10.5.sdk/usr/include/stdio.h
-c0000000047BA99310000000000003D1D
-t1203411249
-s15645
-
-N/Developer/SDKs/MacOSX10.5.sdk/usr/include/stdlib.h
-c0000000047BA99310000000000002A79
-t1203411249
-s10873
-
-N/Developer/SDKs/MacOSX10.5.sdk/usr/include/string.h
-c0000000047BA99320000000000001731
-t1203411250
-s5937
-
-N/Users/julien/Downloads/09-11/poly_parser.h
-c000000004B01B93F0000000000000316
-t1258404159
-s790
-
-N/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/../../../../../../../../../Downloads/09-11/poly_parser.c
-c000000004B0CDCC200000000000008CB
-t1259134146
-s2251
-i<stdio.h>
-i<stdlib.h>
-i<string.h>
-i"poly_parser.h"
-
-N/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/assembleur.cpp
-c000000004B0CDCF700000000000000D7
-t1259134199
-s215
-i"assembleur.h"
-
-N/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/assembleur.h
-c000000004B0CDCFB00000000000000D3
-t1259134203
-s211
-
-N/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/Debug/poly
-t2
-s0
-
-N/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/Objects-normal/i386/assembleur.o
-t1259134212
-s2468
-
-N/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/Objects-normal/i386/main.o
-t1259134212
-s69040
-
-N/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/Objects-normal/i386/poly.LinkFileList
-c000000004B0CDD0400000000000001D8
-t1259134212
-s472
-
-N/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/Objects-normal/i386/poly_parser.o
-t1259134212
-s5164
-
-N/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/main.cpp
-c000000004B0CDBDC000000000000008F
-t1259133916
-s143
-i<iostream>
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies280827012#280827012#0(0"0(0#1#0"7947009927035180032#0"0#
-
-CCompileC build/poly.build/Debug/poly.build/Objects-normal/i386/assembleur.o "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/assembleur.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
-s280827012.203878
-e280827012.551963
-r1
-xCompileC
-xbuild/poly.build/Debug/poly.build/Objects-normal/i386/assembleur.o
-x/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/assembleur.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-o/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/assembleur.cpp: In function 'char* assembler(char*)':
-o/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/assembleur.cpp:21: warning: control reaches end of non-void function
-lSLF07#2@114"Compile /Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/assembleur.cpp280827012#280827012#0(307"/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/assembleur.cpp: In function 'char* assembler(char*)':/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/assembleur.cpp:21: warning: control reaches end of non-void function1(22@40"Control reaches end of non-void function280827012#146#161#0(6@106"/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/assembleur.cpp280826999#21#0#21#0#40"control reaches end of non-void function0(0#0#106"/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/assembleur.cpp4300882208#1895"    cd "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/poly-generated-files.hmap" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/poly-own-target-headers.hmap" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/poly-all-target-headers.hmap" -iquote "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/poly-project-headers.hmap" "-F/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/Debug" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/Debug/include" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/DerivedSources/i386" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/DerivedSources" -c "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/assembleur.cpp" -o "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/Objects-normal/i386/assembleur.o"0#
-
-CCompileC build/poly.build/Debug/poly.build/Objects-normal/i386/main.o "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/main.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
-s280827012.163330
-e280827012.971268
-r1
-xCompileC
-xbuild/poly.build/Debug/poly.build/Objects-normal/i386/main.o
-x/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/main.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@108"Compile /Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/main.cpp280827012#280827012#0(0"0(0#0#100"/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/main.cpp7946934914957390848#1883"    cd "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/poly-generated-files.hmap" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/poly-own-target-headers.hmap" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/poly-all-target-headers.hmap" -iquote "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/poly-project-headers.hmap" "-F/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/Debug" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/Debug/include" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/DerivedSources/i386" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/DerivedSources" -c "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/main.cpp" -o "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/Objects-normal/i386/main.o"0#
-
-CCompileC build/poly.build/Debug/poly.build/Objects-normal/i386/poly_parser.o "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/../../../../../../../../../Downloads/09-11/poly_parser.c" normal i386 c com.apple.compilers.gcc.4_2
-s280827012.552075
-e280827012.758091
-r1
-xCompileC
-xbuild/poly.build/Debug/poly.build/Objects-normal/i386/poly_parser.o
-x/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/../../../../../../../../../Downloads/09-11/poly_parser.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@156"Compile /Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/../../../../../../../../../Downloads/09-11/poly_parser.c280827012#280827012#0(0"0(0#0#148"/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/../../../../../../../../../Downloads/09-11/poly_parser.c4300882208#1917"    cd "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/poly-generated-files.hmap" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/poly-own-target-headers.hmap" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/poly-all-target-headers.hmap" -iquote "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/poly-project-headers.hmap" "-F/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/Debug" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/Debug/include" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/DerivedSources/i386" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/DerivedSources" -c "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/../../../../../../../../../Downloads/09-11/poly_parser.c" -o "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/Objects-normal/i386/poly_parser.o"0#
-
-CLd "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/Debug/poly" normal i386
-s280827012.971363
-e280827013.417390
-r0
-xLd
-x/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/Debug/poly
-xnormal
-xi386
-oUndefined symbols:
-o  "_strndup", referenced from:
-o      _poly_parsing in poly_parser.o
-old: symbol(s) not found
-ocollect2: ld returned 1 exit status
-lSLF07#2@113"Link /Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/Debug/poly280827012#280827013#0(147"Undefined symbols:  "_strndup", referenced from:      _poly_parsing in poly_parser.old: symbol(s) not foundcollect2: ld returned 1 exit status4(4@28""_strndup", referenced from:280827013#19#31#0(6@0"280827013#0#0#0#0#0"0(13@30"_poly_parsing in poly_parser.o280827013#50#37#0(6@0"280827013#0#0#0#0#0"0(13@19"Symbol(s) not found280827013#87#24#0(6@0"280827013#0#0#0#0#0"0(13@35"Collect2: ld returned 1 exit status280827013#111#36#0(6@0"280827013#0#0#0#0#0"0(0#0#0"4300882208#757"    cd "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly"    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/g++-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk "-L/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/Debug" "-F/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/Debug" -filelist "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/poly.build/Debug/poly.build/Objects-normal/i386/poly.LinkFileList" -mmacosx-version-min=10.5 -o "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/Projet/poly/build/Debug/poly"1#
-
