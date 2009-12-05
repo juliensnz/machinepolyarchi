@@ -1,143 +1,0 @@
-Ttp1
-v7
-r0
-t276345597.521869
-cCheck dependencies
-cCompileC build/tp1.build/Release/tp1.build/Objects-normal/i386/main.o /Users/julien/projet/Xcode/archi/tp1/main.c normal i386 c com.apple.compilers.gcc.4_2
-cLd /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/i386/tp1 normal i386
-cCompileC build/tp1.build/Release/tp1.build/Objects-normal/ppc/main.o /Users/julien/projet/Xcode/archi/tp1/main.c normal ppc c com.apple.compilers.gcc.4_2
-cLd /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/ppc/tp1 normal ppc
-cCreateUniversalBinary /Users/julien/projet/Xcode/archi/tp1/build/Release/tp1 normal "i386 ppc"
-cGenerateDSYMFile /Users/julien/projet/Xcode/archi/tp1/build/Release/tp1.dSYM /Users/julien/projet/Xcode/archi/tp1/build/Release/tp1
-
-N/Developer/SDKs/MacOSX10.6.sdk
-c000000004AB0D9EF00000000000000EE
-t1253104111
-s238
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/math.h
-c000000004A5C14A000000000000004F1
-t1247548576
-s1265
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdio.h
-c000000004A5C14A70000000000004174
-t1247548583
-s16756
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/string.h
-c000000004A5C14A70000000000001731
-t1247548583
-s5937
-
-N/Users/julien/projet/Xcode/archi/tp1/build/Release/tp1
-t1254295218
-s25348
-
-N/Users/julien/projet/Xcode/archi/tp1/build/Release/tp1.dSYM
-t1254295218
-s102
-
-N/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/i386/main.o
-t1254295218
-s4196
-
-N/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/i386/tp1
-t1254295218
-s9036
-
-N/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/i386/tp1.LinkFileList
-c000000004AB9BD7E0000000000000062
-t1253686654
-s98
-
-N/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/ppc/main.o
-t1254295218
-s4504
-
-N/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/ppc/tp1
-t1254295218
-s8964
-
-N/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/ppc/tp1.LinkFileList
-c000000004AB9BD7E0000000000000061
-t1253686654
-s97
-
-N/Users/julien/projet/Xcode/archi/tp1/main.c
-c000000004AC306B20000000000000303
-t1254295218
-s771
-i<stdio.h>
-i<math.h>
-i<string.h>
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies276345597#276345597#0(0"0(0#1#0"7947009927035180032#0"0#
-
-CCompileC build/tp1.build/Release/tp1.build/Objects-normal/i386/main.o /Users/julien/projet/Xcode/archi/tp1/main.c normal i386 c com.apple.compilers.gcc.4_2
-s275988018.798352
-e275988018.898401
-r1
-xCompileC
-xbuild/tp1.build/Release/tp1.build/Objects-normal/i386/main.o
-x/Users/julien/projet/Xcode/archi/tp1/main.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@51"Compile /Users/julien/projet/Xcode/archi/tp1/main.c275988018#275988018#0(0"0(0#0#43"/Users/julien/projet/Xcode/archi/tp1/main.c4324409632#1204"    cd /Users/julien/projet/Xcode/archi/tp1    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/tp1-generated-files.hmap -I/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/tp1-own-target-headers.hmap -I/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/tp1-all-target-headers.hmap -iquote /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/tp1-project-headers.hmap -F/Users/julien/projet/Xcode/archi/tp1/build/Release -I/Users/julien/projet/Xcode/archi/tp1/build/Release/include -I/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/DerivedSources/i386 -I/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/DerivedSources -c /Users/julien/projet/Xcode/archi/tp1/main.c -o /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/i386/main.o0#
-
-CCompileC build/tp1.build/Release/tp1.build/Objects-normal/ppc/main.o /Users/julien/projet/Xcode/archi/tp1/main.c normal ppc c com.apple.compilers.gcc.4_2
-s275988018.799322
-e275988018.879966
-r1
-xCompileC
-xbuild/tp1.build/Release/tp1.build/Objects-normal/ppc/main.o
-x/Users/julien/projet/Xcode/archi/tp1/main.c
-xnormal
-xppc
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@51"Compile /Users/julien/projet/Xcode/archi/tp1/main.c275988018#275988018#0(0"0(0#0#43"/Users/julien/projet/Xcode/archi/tp1/main.c4324409632#1198"    cd /Users/julien/projet/Xcode/archi/tp1    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch ppc -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mtune=G5 -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/tp1-generated-files.hmap -I/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/tp1-own-target-headers.hmap -I/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/tp1-all-target-headers.hmap -iquote /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/tp1-project-headers.hmap -F/Users/julien/projet/Xcode/archi/tp1/build/Release -I/Users/julien/projet/Xcode/archi/tp1/build/Release/include -I/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/DerivedSources/ppc -I/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/DerivedSources -c /Users/julien/projet/Xcode/archi/tp1/main.c -o /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/ppc/main.o0#
-
-CCreateUniversalBinary /Users/julien/projet/Xcode/archi/tp1/build/Release/tp1 normal "i386 ppc"
-s275988018.917593
-e275988018.921834
-r1
-xCreateUniversalBinary
-x/Users/julien/projet/Xcode/archi/tp1/build/Release/tp1
-xnormal
-xi386 ppc
-lSLF07#2@57"CreateUniversalBinary build/Release/tp1 normal "i386 ppc"275988018#275988018#0(0"0(0#0#45"/Users/julien/projet/Xcode/archi/tp1/i386 ppc4324409632#322"    cd /Users/julien/projet/Xcode/archi/tp1    /usr/bin/lipo -create /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/i386/tp1 /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/ppc/tp1 -output /Users/julien/projet/Xcode/archi/tp1/build/Release/tp10#
-
-CGenerateDSYMFile /Users/julien/projet/Xcode/archi/tp1/build/Release/tp1.dSYM /Users/julien/projet/Xcode/archi/tp1/build/Release/tp1
-s275988018.921936
-e275988018.931986
-r1
-xGenerateDSYMFile
-x/Users/julien/projet/Xcode/archi/tp1/build/Release/tp1.dSYM
-x/Users/julien/projet/Xcode/archi/tp1/build/Release/tp1
-lSLF07#2@57"GenerateDSYMFile build/Release/tp1.dSYM build/Release/tp1275988018#275988018#0(0"0(0#0#54"/Users/julien/projet/Xcode/archi/tp1/build/Release/tp14324409632#194"    cd /Users/julien/projet/Xcode/archi/tp1    /Developer/usr/bin/dsymutil /Users/julien/projet/Xcode/archi/tp1/build/Release/tp1 -o /Users/julien/projet/Xcode/archi/tp1/build/Release/tp1.dSYM0#
-
-CLd /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/i386/tp1 normal i386
-s275988018.898688
-e275988018.917488
-r1
-xLd
-x/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/i386/tp1
-xnormal
-xi386
-lSLF07#2@99"Link /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/i386/tp1275988018#275988018#0(0"0(0#0#0"4324409632#516"    cd /Users/julien/projet/Xcode/archi/tp1    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/julien/projet/Xcode/archi/tp1/build/Release -F/Users/julien/projet/Xcode/archi/tp1/build/Release -filelist /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/i386/tp1.LinkFileList -mmacosx-version-min=10.6 -o /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/i386/tp10#
-
-CLd /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/ppc/tp1 normal ppc
-s275988018.880069
-e275988018.903607
-r1
-xLd
-x/Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/ppc/tp1
-xnormal
-xppc
-lSLF07#2@98"Link /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/ppc/tp1275988018#275988018#0(0"0(0#0#0"4324409632#513"    cd /Users/julien/projet/Xcode/archi/tp1    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch ppc -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/julien/projet/Xcode/archi/tp1/build/Release -F/Users/julien/projet/Xcode/archi/tp1/build/Release -filelist /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/ppc/tp1.LinkFileList -mmacosx-version-min=10.6 -o /Users/julien/projet/Xcode/archi/tp1/build/tp1.build/Release/tp1.build/Objects-normal/ppc/tp10#
-

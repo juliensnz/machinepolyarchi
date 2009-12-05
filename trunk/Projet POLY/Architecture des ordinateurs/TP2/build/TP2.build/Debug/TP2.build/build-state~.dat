@@ -1,56 +1,0 @@
-TTP2
-v7
-r0
-t276554884.216050
-cCheck dependencies
-cCompileC build/TP2.build/Debug/TP2.build/Objects-normal/i386/main.o "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/main.c" normal i386 c com.apple.compilers.gcc.4_2
-
-N/Developer/SDKs/MacOSX10.5.sdk
-c000000004AB0D9D700000000000000EE
-t1253104087
-s238
-
-N/Developer/SDKs/MacOSX10.5.sdk/usr/include/stdio.h
-c0000000047BA99310000000000003D1D
-t1203411249
-s15645
-
-N/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/build/Debug/TP2
-t2
-s0
-
-N/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/build/TP2.build/Debug/TP2.build/Objects-normal/i386/TP2.LinkFileList
-c000000004ACBAD04000000000000008F
-t1254862084
-s143
-
-N/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/build/TP2.build/Debug/TP2.build/Objects-normal/i386/main.o
-t2
-s0
-
-N/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/main.c
-c000000004ACBAD030000000000000064
-t1254862083
-s100
-i<stdio.h>
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies276554884#276554884#0(0"0(0#1#0"7947009927035180032#0"0#
-
-CCompileC build/TP2.build/Debug/TP2.build/Objects-normal/i386/main.o "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/main.c" normal i386 c com.apple.compilers.gcc.4_2
-s276554884.151572
-e276554884.215968
-r0
-xCompileC
-xbuild/TP2.build/Debug/TP2.build/Objects-normal/i386/main.o
-x/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/main.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@98"Compile /Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/main.c276554884#276554884#0(372"/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/main.c: In function 'main':/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/main.c:4: error: array size missing in 'entree'/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/main.c:4: warning: unused variable 'entree'2(4@30"Array size missing in 'entree'276554884#112#132#0(6@90"/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/main.c276554883#4#0#4#0#0"0(22@24"Unused variable 'entree'276554884#244#128#0(6@90"/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/main.c276554883#4#0#4#0#19"unused variable '*'0(0#0#90"/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/main.c8027224646438048768#1707"    cd "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/build/TP2.build/Debug/TP2.build/TP2-generated-files.hmap" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/build/TP2.build/Debug/TP2.build/TP2-own-target-headers.hmap" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/build/TP2.build/Debug/TP2.build/TP2-all-target-headers.hmap" -iquote "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/build/TP2.build/Debug/TP2.build/TP2-project-headers.hmap" "-F/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/build/Debug" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/build/Debug/include" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/build/TP2.build/Debug/TP2.build/DerivedSources/i386" "-I/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/build/TP2.build/Debug/TP2.build/DerivedSources" -c "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/main.c" -o "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/build/TP2.build/Debug/TP2.build/Objects-normal/i386/main.o"1#
-
-CLd "/Users/julien/projet/Xcode/Univ/L2/S3/Informatique/Architecture des ordinateurs/TP2/build/Debug/TP2" normal i386
-r0
-
