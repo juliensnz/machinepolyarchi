@@ -8,7 +8,7 @@ using namespace std;
  * et d'en récuperer les elements via les arguments.
  * La chaine instruction passée en argument est détruite par l'opération.
  */ 
-void parse(string *instruction,
+void parseText(string *instruction,
 		   string *etiquette,
 		   string *commande,
 		   string *ri,
@@ -79,6 +79,28 @@ void parse(string *instruction,
         instruction->clear();
 		//On vide instruction
 	}
+}
+
+void parseHexa(int inst,
+			   int *opcode,
+			   int *ri,
+			   int *rj,
+			   int *rk,
+			   int *nc) {
+	
+	*opcode = (inst & 0xF0000000) >> 28;
+	cout << dec;
+	cout << "Op = " << *opcode;
+	*ri = (inst & 0x0E000000) >> 25;
+	cout << " ri = " << *ri;
+	*rj = (inst & 0x01C00000) >> 22;
+	cout << " rj = " << *rj;
+	*rk = (inst & 0x00380000) >> 19;
+	cout << " rk = " << *rk;
+	*nc = (inst & 0x0007F800) >> 11;
+	if (*opcode == 0 || *opcode == 8)
+		*nc = ((inst & 0x0007F800) >> 11) | 0xFFFFFF00;
+	cout << " nc = " << *nc << endl;
 }
 
 /* La fonction getToken renvoie soit la sous-chaine délimitée par 0 et separator, soit ""

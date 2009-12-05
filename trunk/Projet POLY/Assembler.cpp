@@ -9,15 +9,15 @@
 
 using namespace std;
 
-void parseFile(string path, string input, string *output){
-    string inputPath = path + input;
-	//Chemin + nom du fichier entrée
-    string outputPath = (output) ? (path + *output) : (path + input + "_asm");
-	//Si output est défini, chemin + nom fichier sortie,
-	//Sinon chemin + nom du fichier entrée + _asm
-	map <string, int> opcodeToInt, regToInt;
-	
+void parseFile(string inputPath, string outputPath){
 	if (!inputPath.empty()) {
+		if (outputPath.empty())
+			outputPath = inputPath + "_asm";
+		//Si le chemin de sortie n'est pas spécifié, on crée le fichier dans
+		//le même répertoire, nomSortie = nomEntree_asm
+		
+		map <string, int> opcodeToInt, regToInt;
+		
 		opcodeToInt["load"]    = 0;
 		opcodeToInt["read"]    = 1;
 		opcodeToInt["print"]   = 2;
@@ -38,7 +38,8 @@ void parseFile(string path, string input, string *output){
 		
     	ifstream inputFile(inputPath.c_str(), ios::in);
     	ofstream outputFile(outputPath.c_str(), ios::out | ios::trunc);
-		//Ouverture des deux fichiers
+		//Ouverture des deux fichiers, ecrasement de l'eventuel fichier de sortie
+		//preexistant
     	if(inputFile && outputFile){
     	    string line, etq, cmd, ri, rj, rk, nc;
     	    int nbLigne = 0;
@@ -63,7 +64,7 @@ void parseFile(string path, string input, string *output){
     	        getline(inputFile, line);
     	        if (!line.empty()){
 					nbLigne++;
-					parse(&line, &etq, &cmd, &ri, &rj, &rk, &nc);
+					parseText(&line, &etq, &cmd, &ri, &rj, &rk, &nc);
 					outputFile << "0x" << setfill('0') << setw(8) << hex << convert(cmd, ri, rj, rk, nc, opcodeToInt, regToInt, etiquettes, nbLigne) << endl;
 				}
     	    }
@@ -71,7 +72,7 @@ void parseFile(string path, string input, string *output){
         outputFile.close();
     	}
     	else
-            cerr << "Echec de l'ouverture du fichier" << endl;
+			cerr << "Echec de l'ouverture / creation d'un des fichiers" << endl;
     }
     else
     	cerr << "Pas de chemin de fichier" << endl;

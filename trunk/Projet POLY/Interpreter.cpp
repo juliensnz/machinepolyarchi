@@ -1,134 +1,80 @@
-/*#include "Interpreter.h"
-
+#include "Interpreter.h"
+#include "Parser.hpp"
 #include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string>
+#include <iomanip>
 #include <fstream>
+#include <sstream>
+#include <string>
 #include <math.h>
 
-#define TAILLE 100
+#define TAILLE_MEMOIRE 512
 
 using namespace std;
 
-char * returnLigne(int numeroLigne) {
-	char * ligne= (char*)malloc(sizeof(char)*100);
-	char courant;
-	int cpt = 0;
-	ifstream pointFichier("instructions.txt", ios::in);
-	if(pointFichier){
-		for (int i=1; i<numeroLigne; i++){
-			pointFichier.get(courant);
-			while(courant!='\n'){
-				pointFichier.get(courant);
+unsigned int* loadMemory(string inputPath){
+	unsigned int* memory = new unsigned int[TAILLE_MEMOIRE];
+	int i = 0;
+	string line = "";
+	ifstream inputFile (inputPath.c_str(), ios::in);
+	
+	if (inputFile){
+		while (getline(inputFile, line) && i < TAILLE_MEMOIRE) {
+			if (!line.empty()){
+				istringstream iss(line);
+				iss >> hex >> memory[i];
+				i++;
 			}
 		}
-		pointFichier.get(courant);
-		while(courant != '\n'){
-			cout << courant << endl;
-			ligne[cpt] = courant;
-			cpt++;
-			pointFichier.get(courant);
-		}
-		
-		pointFichier.close();
-	}else{
-		printf("Erreur ouverture flux fichier");
 	}
-	printf("%s\n", ligne);
-	pointFichier.close();
-	return ligne;
+	else
+		cerr << "Erreur à l'ouverture du fichier" << endl;
+	
+	return memory;
 }
 
-int nbLigne(){
-	ifstream pointFichier("instructions.txt", ios::in);
-	int cpt=0;
-	char courant;
-	if(pointFichier){
-		while (!pointFichier.eof()){
-			pointFichier.get(courant);
-			if (courant == '\n'){cpt++;}
-		}
-		
-		pointFichier.close();
-	}else{
-		printf("Erreur ouverture flux fichier");
-	}
-	return --cpt;
-}
-
-
-int main (int argc, char * const argv[]){
-	int numeroLigne = 2;
-	char * ligne;
-	returnLigne(3);
-	printf("Voici le nb de lignes : %d", nbLigne());
+void execMemory(unsigned int* memory){
+	int registres[6] = {0};
+	int opcode, ri, rj, rk, nc;
 	
-	int lr;
-	int numeroInstruction;
-	short int reg[4];
-	
-	//si l'opérateur == 9 alors fin du end du programme
-	while (op!=9) {
-		// je suppose que toutes les lignes de code assembleurs sont bien séparer par une fonction qui me retourne l'opcode, avec les trois registres, ainsi que la constante.
-		//opérations possibles
-		switch (op) {
-				//load
-			case 0:
-				reg[ri] = cst;
+	for (int i = 0; i < TAILLE_MEMOIRE; i++) {
+		parseHexa(memory[i], &opcode, &ri, &rj, &rk, &nc);
+		switch (opcode) {
+			case 0: //Load ri, c
+				registres[ri] = nc;
 				break;
-				
-				//read, lit un entier au clavier et le rentre dans ri
-			case 1:
-				int entier1;
-				cout << "Veuillez rentrer un entier : " << endl;
-				cin >> entier1;
-				cout << endl;
-				reg[ri] = (short int)entier1;
+			case 1: //Read ri
+					//registres[ri] = getInt();
 				break;
-				
-				//print
 			case 2:
-				printf("Voici le contenu de ri : %d\n", reg[ri]);
+				cout << setw(3) << setfill('0') << registres[ri];
 				break;
-				
-				//pow1
 			case 3:
-				reg[ri] = (short int)pow(reg[rj], cst);
+				registres[ri] = pow(registres[rj], nc);
 				break;
-				
-				//pow2
 			case 4:
-				reg[ri] = (short int)pow(reg[rj], reg[rk]);
+				registres[ri] = pow(registres[rj], registres[rk]);
 				break;
-				//daxpy
 			case 5:
-				reg[ri] = reg[ri] + reg[rj] * reg[rk];
+				registres[ri] = registres[ri] + registres[rj] * registres[rk];
 				break;
-				
-				//setlr
 			case 6:
-				lr = 1;
+				registres[0] = 1;
 				break;
-				//resetlr
 			case 7:
-				lr = 0;
+				registres[0] = 0;
 				break;
-				//loop
 			case 8:
-				if (reg[0] < reg[ri]){
-					numeroInstruction = numeroInstruction + cst;
+				if (registres[1] < registres[ri]){
+					i += nc;
+					registres[1] += (registres[0] == 1) ? 1 : -1;
 				}
-				if(lr == 1){
-					reg[0]++;
-				}else {
-					reg[0]--;
-				}
+				break;
+			case 9:
+				i = TAILLE_MEMOIRE;
 				break;
 			default:
+				i = TAILLE_MEMOIRE;
 				break;
 		}
-	}
-	
-	
-}*/
+	}	
+}

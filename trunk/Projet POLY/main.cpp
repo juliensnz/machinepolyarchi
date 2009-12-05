@@ -2,10 +2,14 @@
 #include <string>
 #include "Parser.hpp"
 #include "Assembler.hpp"
+#include "Interpreter.h"
 
 using namespace std;
 
 int main (int argc, char * const argv[]) {
-	parseFile("", "test.txt");
+	int a, b, c ,d, e;
+	parseFile("test.txt");
+	parseHexa(0x0207b800, &a, &b, &c, &d, &e);
+	loadMemory("test.txt_asm");
     return 0;
 }

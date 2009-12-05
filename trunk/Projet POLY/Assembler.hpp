@@ -4,7 +4,7 @@
 #include <string>
 #include <map>
 
-void parseFile(std::string path, std::string input, std::string *output = NULL);
+void parseFile(std::string inputPath, std::string outputPath = "");
 unsigned int convert(std::string commande,
 					 std::string ri,
 					 std::string rj,
