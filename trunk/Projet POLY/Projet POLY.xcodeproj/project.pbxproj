@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		383143D810C9CE9D001FE6EC /* Interpreter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 383143D710C9CE9D001FE6EC /* Interpreter.cpp */; };
 		388176DC10C2B9C700194BED /* Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 388176DB10C2B9C700194BED /* Parser.cpp */; };
 		38D4619110C593CC00AEC496 /* Assembler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38D4618E10C593CC00AEC496 /* Assembler.cpp */; };
 		8DD76F650486A84900D96B5E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
@@ -28,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		08FB7796FE84155DC02AAC07 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		383143D610C9CE9D001FE6EC /* Interpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interpreter.h; sourceTree = "<group>"; };
+		383143D710C9CE9D001FE6EC /* Interpreter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Interpreter.cpp; sourceTree = "<group>"; };
 		388176DB10C2B9C700194BED /* Parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Parser.cpp; sourceTree = "<group>"; };
 		38D4618E10C593CC00AEC496 /* Assembler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Assembler.cpp; sourceTree = "<group>"; };
 		38D4618F10C593CC00AEC496 /* Assembler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Assembler.hpp; sourceTree = "<group>"; };
@@ -50,23 +53,11 @@
 		08FB7794FE84155DC02AAC07 /* Projet POLY */ = {
 			isa = PBXGroup;
 			children = (
-				08FB7795FE84155DC02AAC07 /* Source */,
+				383143DA10C9CFB3001FE6EC /* Source */,
 				C6859E8C029090F304C91782 /* Documentation */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
 			);
 			name = "Projet POLY";
-			sourceTree = "<group>";
-		};
-		08FB7795FE84155DC02AAC07 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				38D4618E10C593CC00AEC496 /* Assembler.cpp */,
-				38D4618F10C593CC00AEC496 /* Assembler.hpp */,
-				38D4619010C593CC00AEC496 /* Parser.hpp */,
-				388176DB10C2B9C700194BED /* Parser.cpp */,
-				08FB7796FE84155DC02AAC07 /* main.cpp */,
-			);
-			name = Source;
 			sourceTree = "<group>";
 		};
 		1AB674ADFE9D54B511CA2CBB /* Products */ = {
@@ -75,6 +66,44 @@
 				8DD76F6C0486A84900D96B5E /* Projet POLY */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		383143DA10C9CFB3001FE6EC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				383143DD10C9CFE1001FE6EC /* Assembleur */,
+				383143DE10C9CFF5001FE6EC /* Parseur */,
+				383143DF10C9D000001FE6EC /* Interpreteur */,
+				08FB7796FE84155DC02AAC07 /* main.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		383143DD10C9CFE1001FE6EC /* Assembleur */ = {
+			isa = PBXGroup;
+			children = (
+				38D4618E10C593CC00AEC496 /* Assembler.cpp */,
+				38D4618F10C593CC00AEC496 /* Assembler.hpp */,
+			);
+			name = Assembleur;
+			sourceTree = "<group>";
+		};
+		383143DE10C9CFF5001FE6EC /* Parseur */ = {
+			isa = PBXGroup;
+			children = (
+				38D4619010C593CC00AEC496 /* Parser.hpp */,
+				388176DB10C2B9C700194BED /* Parser.cpp */,
+			);
+			name = Parseur;
+			sourceTree = "<group>";
+		};
+		383143DF10C9D000001FE6EC /* Interpreteur */ = {
+			isa = PBXGroup;
+			children = (
+				383143D610C9CE9D001FE6EC /* Interpreter.h */,
+				383143D710C9CE9D001FE6EC /* Interpreter.cpp */,
+			);
+			name = Interpreteur;
 			sourceTree = "<group>";
 		};
 		C6859E8C029090F304C91782 /* Documentation */ = {
@@ -131,6 +160,7 @@
 				8DD76F650486A84900D96B5E /* main.cpp in Sources */,
 				388176DC10C2B9C700194BED /* Parser.cpp in Sources */,
 				38D4619110C593CC00AEC496 /* Assembler.cpp in Sources */,
+				383143D810C9CE9D001FE6EC /* Interpreter.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
