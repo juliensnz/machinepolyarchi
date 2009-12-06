@@ -20,8 +20,11 @@ int main (int argc, char * const argv[]) {
 	
 	
 	parseFile("test.txt");
+	
 	unsigned int* prog = new unsigned int[TAILLE_MEMOIRE];
-	prog = loadMemory("test3.txt");
+	
+	prog = loadMemory("test.txt_asm");
+	
 	execMemory(prog);
 	
 	
