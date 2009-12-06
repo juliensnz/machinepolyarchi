@@ -10,6 +10,6 @@ int main (int argc, char * const argv[]) {
 	int a, b, c ,d, e;
 	parseFile("test.txt");
 	parseHexa(0x0207b800, &a, &b, &c, &d, &e);
-	loadMemory("test.txt_asm");
+	loadMemory("test2.txt");
     return 0;
 }
