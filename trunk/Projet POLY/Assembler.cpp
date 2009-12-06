@@ -18,6 +18,8 @@ void parseFile(string inputPath, string outputPath){
 		
 		map <string, int> opcodeToInt, regToInt;
 		
+		
+		
 		opcodeToInt["load"]    = 0;
 		opcodeToInt["read"]    = 1;
 		opcodeToInt["print"]   = 2;
@@ -27,6 +29,7 @@ void parseFile(string inputPath, string outputPath){
 		opcodeToInt["resetlr"] = 7;
 		opcodeToInt["loop"]    = 8;
 		opcodeToInt["end"]     = 9;
+		//tableau associatif de correspondace entre les commandes et leur code opération.
 		
 		regToInt[""]   = 0;
 		regToInt["r0"] = 1;
@@ -34,6 +37,7 @@ void parseFile(string inputPath, string outputPath){
 		regToInt["r2"] = 3;
 		regToInt["r3"] = 4;
 		regToInt["r4"] = 5;
+		//tableau associatif entre les différents registres et leur code valeur
 		//Deux dictionnaires de conversion
 		
     	ifstream inputFile(inputPath.c_str(), ios::in);
@@ -44,30 +48,42 @@ void parseFile(string inputPath, string outputPath){
     	    string line, etq, cmd, ri, rj, rk, nc;
     	    int nbLigne = 0;
 			map <string, int> etiquettes;
-
+			//Création de la map contenant les étiquètes
+			
 			while (!inputFile.eof()) {
 				getline(inputFile, line);
 				if (!line.empty()){
+					//Si la ligne n'est pas vide
 					nbLigne++;
 					getEtiq(&line, &etq);
+					//On récupère la valeur de la ligne vers laquelle elle pointe 
+					
 					if (!etq.empty())
 						etiquettes[etq] = nbLigne;
+						//On enregistre dans la table "etiquettes" le nombre de la ligne associé au nom de l'étiquette
 					
 					cout << etq << " : " << etiquettes[etq] << endl;
+					//Affichage de l'étiquette et de sa position dans la console
 				}
 			}
+			//Premier parcour du fichier pour enregistrer la position des étiquètes.
+			
 			inputFile.clear();
 			inputFile.seekg(0, ios::beg);
 			nbLigne = 0;
+			//Retour au début du fichier et remise à 0 des paramètres de lecture.
 			
     	    while(!inputFile.eof()){
     	        getline(inputFile, line);
     	        if (!line.empty()){
 					nbLigne++;
 					parseText(&line, &etq, &cmd, &ri, &rj, &rk, &nc);
+					//parsing de la ligne par la fonction parseText
 					outputFile << "0x" << setfill('0') << setw(8) << hex << convert(cmd, ri, rj, rk, nc, opcodeToInt, regToInt, etiquettes, nbLigne) << endl;
+					//enregistrement dans le fichier de sortie la ligne assemblée.
 				}
     	    }
+			//Second parcour du fichier pour traitement
         inputFile.close();
         outputFile.close();
     	}
@@ -89,17 +105,22 @@ unsigned int convert(string commande,
 					 int currLine){
 	
 	unsigned int result = opcodeToInt[commande];
+	//on initialise le résultat avec le code de la commande
 	
 	if (result == 3 && nc.empty())
 		result = 4;
+		//si la commande est pow et que le champ de valeur est vide on change le code en powBis
 	else if (result == 8){
+		//Si le code est "loop"
 		if (!isInt(&rj)){
 			int i = etiquettes[rj] - currLine;
 			stringstream iss;
 			iss << i;
 			iss >> rj;
+			//saut à la ligne indiquée
 		}
 	}
+	
 	cout << hex << result << endl;
 	result <<= 3;
 	//Probleme avec l'opcode 0, decalage de 0 = 0
@@ -117,6 +138,7 @@ unsigned int convert(string commande,
 	result += (0x000000ff & toInt(nc));
 	result <<= 11;
 	cout << hex << result << endl;
+	//conversion des commandes en int.
 	return result;
 }
 
