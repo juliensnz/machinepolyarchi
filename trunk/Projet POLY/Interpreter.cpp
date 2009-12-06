@@ -55,7 +55,7 @@ void execMemory(unsigned int* memory){
 				registres[ri] = getInt();
 				break;
 			case 2://Print ri
-				cout << setw(3) << setfill('0') << registres[ri];
+				cout << setw(3) << setfill('0') << registres[ri] << endl;
 				break;
 			case 3://Pow sur un entier
 				registres[ri] = pow(registres[rj], nc);
@@ -80,10 +80,12 @@ void execMemory(unsigned int* memory){
 				break;
 			case 9://End
 				cout << "Exit" << endl;
+				i = TAILLE_MEMOIRE;
 				return;
 				break;
 			default://Sinon, end
 				cout << "Exit" << endl;
+				i = TAILLE_MEMOIRE;
 				return;
 				break;
 		}
@@ -92,8 +94,8 @@ void execMemory(unsigned int* memory){
 
 //getInt récupère un entier et le retourne
 int getInt(){
-	int i;
-	cout << "Veuillez entrer un entier" << endl;
+	int i = 0;
+	cout << "Veuillez entrer un entier" << endl << "entrée : ";
 	cin >> i;
 	if (i < -255 || i > 255)
 		return getInt();
