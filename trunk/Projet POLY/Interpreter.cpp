@@ -40,6 +40,7 @@ unsigned int* loadMemory(string inputPath){
 	return memory;
 }
 
+
 void execMemory(unsigned int* memory){
 	int registres[6] = {0};
 	int opcode, ri, rj, rk, nc;
@@ -53,46 +54,50 @@ void execMemory(unsigned int* memory){
 			case 1: //Read ri
 				registres[ri] = getInt();
 				break;
-			case 2:
+			case 2://Print ri
 				cout << setw(3) << setfill('0') << registres[ri];
 				break;
-			case 3:
+			case 3://Pow sur un entier
 				registres[ri] = pow(registres[rj], nc);
 				break;
-			case 4:
+			case 4://Pow sur un registre
 				registres[ri] = pow(registres[rj], registres[rk]);
 				break;
-			case 5:
+			case 5://daxpy
 				registres[ri] = registres[ri] + registres[rj] * registres[rk];
 				break;
-			case 6:
+			case 6://setLr
 				registres[0] = 1;
 				break;
-			case 7:
+			case 7://resetLr
 				registres[0] = 0;
 				break;
-			case 8:
+			case 8://Loop
 				if (registres[1] < registres[ri]){
 					i += nc;
 					registres[1] += (registres[0] == 1) ? 1 : -1;
 				}
 				break;
-			case 9:
-				i = TAILLE_MEMOIRE;
+			case 9://End
+				cout << "Exit" << endl;
+				return;
 				break;
-			default:
-				i = TAILLE_MEMOIRE;
+			default://Sinon, end
+				cout << "Exit" << endl;
+				return;
 				break;
 		}
 	}	
 }
 
+//getInt récupère un entier et le retourne
 int getInt(){
 	int i;
 	cout << "Veuillez entrer un entier" << endl;
 	cin >> i;
 	if (i < -255 || i > 255)
 		return getInt();
+		//si l'entier est trop grand ou trop petit
 	else
 		return i;
 }
