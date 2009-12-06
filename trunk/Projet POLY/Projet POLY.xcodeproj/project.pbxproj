@@ -82,8 +82,8 @@
 		383143DD10C9CFE1001FE6EC /* Assembleur */ = {
 			isa = PBXGroup;
 			children = (
-				38D4618E10C593CC00AEC496 /* Assembler.cpp */,
 				38D4618F10C593CC00AEC496 /* Assembler.hpp */,
+				38D4618E10C593CC00AEC496 /* Assembler.cpp */,
 			);
 			name = Assembleur;
 			sourceTree = "<group>";
