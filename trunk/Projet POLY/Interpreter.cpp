@@ -11,17 +11,25 @@
 
 using namespace std;
 
+/*
+ * La fonction loadMemory se charge de stocker dans un tableau de sting
+ * chaque ligne du fichier texte.
+ * Elle fait les contrôles et supprime les lignes vides.
+ */
 unsigned int* loadMemory(string inputPath){
 	unsigned int* memory = new unsigned int[TAILLE_MEMOIRE];
 	int i = 0;
 	string line = "";
 	ifstream inputFile (inputPath.c_str(), ios::in);
-	
+	//Initialisation du fichier
 	if (inputFile){
 		while (getline(inputFile, line) && i < TAILLE_MEMOIRE) {
 			if (!line.empty()){
+				//si la ligne n'est pas vide
 				istringstream iss(line);
+				//on initialise un nouveau flux
 				iss >> hex >> memory[i];
+				//on stocke dans le tableau la ligne en la convertissant en hexa.
 				i++;
 			}
 		}
