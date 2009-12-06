@@ -3,10 +3,11 @@
 
 #include <string>
 
+int getInt();
 unsigned int* loadMemory(std::string inputPath);
 void execMemory(unsigned int* memory);
 
-int getInt();
+
 
 
 #endif //INTERPRETER_H
