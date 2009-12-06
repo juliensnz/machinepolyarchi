@@ -18,8 +18,6 @@ void parseFile(string inputPath, string outputPath){
 		
 		map <string, int> opcodeToInt, regToInt;
 		
-		
-		
 		opcodeToInt["load"]    = 0;
 		opcodeToInt["read"]    = 1;
 		opcodeToInt["print"]   = 2;
@@ -56,17 +54,17 @@ void parseFile(string inputPath, string outputPath){
 					//Si la ligne n'est pas vide
 					nbLigne++;
 					getEtiq(&line, &etq);
-					//On récupère la valeur de la ligne vers laquelle elle pointe 
-					
+					//On récupere l'etiquette eventuelle					
 					if (!etq.empty())
+						//S'il y a une etiquette
 						etiquettes[etq] = nbLigne;
-						//On enregistre dans la table "etiquettes" le nombre de la ligne associé au nom de l'étiquette
+						//On enregistre dans la table "etiquettes" le numero de ligne associé au nom de l'étiquette
 					
 					cout << etq << " : " << etiquettes[etq] << endl;
-					//Affichage de l'étiquette et de sa position dans la console
+					//Affichage de l'étiquette et de sa position dans la console (tests)
 				}
 			}
-			//Premier parcour du fichier pour enregistrer la position des étiquètes.
+			//Premier parcour du fichier pour enregistrer la position des étiquettes.
 			
 			inputFile.clear();
 			inputFile.seekg(0, ios::beg);
@@ -109,7 +107,7 @@ unsigned int convert(string commande,
 	
 	if (result == 3 && nc.empty())
 		result = 4;
-		//si la commande est pow et que le champ de valeur est vide on change le code en powBis
+		//si la commande est pow et que la constante est vide on change le code en powBis
 	else if (result == 8){
 		//Si le code est "loop"
 		if (!isInt(&rj)){
@@ -117,7 +115,8 @@ unsigned int convert(string commande,
 			stringstream iss;
 			iss << i;
 			iss >> rj;
-			//saut à la ligne indiquée
+			//rj prend pour valeur la difference entre la ligne actuelle et la ligne
+			//correspondant a l'etiquette
 		}
 	}
 	
