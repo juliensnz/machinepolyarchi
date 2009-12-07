@@ -22,9 +22,13 @@ int main (int argc, char * const argv[]) {
 	parseFile("test.txt");
 	
 	unsigned int* prog = new unsigned int[TAILLE_MEMOIRE];
+<<<<<<< .mine
+	prog = loadMemory("test.txt_asm");
+=======
 	
 	prog = loadMemory("test.txt_asm");
 	
+>>>>>>> .r28
 	execMemory(prog);
 	
 	
