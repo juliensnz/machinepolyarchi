@@ -7,7 +7,4 @@ int getInt();
 unsigned int* loadMemory(std::string inputPath);
 void execMemory(unsigned int* memory);
 
-
-
-
 #endif //INTERPRETER_H

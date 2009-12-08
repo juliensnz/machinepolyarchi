@@ -46,7 +46,6 @@ void execMemory(unsigned int* memory){
 	int opcode, ri, rj, rk, nc;
 	
 	for (int i = 0; i < TAILLE_MEMOIRE; i++) {
-<<<<<<< .mine
 		if (memory[i] != 0) {
 			parseHexa(memory[i], &opcode, &ri, &rj, &rk, &nc);
 			switch (opcode) {
@@ -57,7 +56,7 @@ void execMemory(unsigned int* memory){
 					registres[ri] = getInt();
 					break;
 				case 2://Print ri
-					cout << setw(3) << setfill('0') << registres[ri];
+					cout << setw(3) << setfill('0') << registres[ri] << endl;
 					break;
 				case 3://Pow sur un entier
 					registres[ri] = pow(registres[rj], nc);
@@ -76,7 +75,7 @@ void execMemory(unsigned int* memory){
 					break;
 				case 8://Loop
 					if (registres[1] < registres[ri]){
-						i += nc;
+						i += nc - 1;
 						registres[1] += (registres[0] == 1) ? 1 : -1;
 					}
 					break;
@@ -89,50 +88,6 @@ void execMemory(unsigned int* memory){
 					return;
 					break;
 			}
-=======
-		parseHexa(memory[i], &opcode, &ri, &rj, &rk, &nc);
-		switch (opcode) {
-			case 0: //Load ri, c
-				registres[ri] = nc;
-				break;
-			case 1: //Read ri
-				registres[ri] = getInt();
-				break;
-			case 2://Print ri
-				cout << setw(3) << setfill('0') << registres[ri] << endl;
-				break;
-			case 3://Pow sur un entier
-				registres[ri] = pow(registres[rj], nc);
-				break;
-			case 4://Pow sur un registre
-				registres[ri] = pow(registres[rj], registres[rk]);
-				break;
-			case 5://daxpy
-				registres[ri] = registres[ri] + registres[rj] * registres[rk];
-				break;
-			case 6://setLr
-				registres[0] = 1;
-				break;
-			case 7://resetLr
-				registres[0] = 0;
-				break;
-			case 8://Loop
-				if (registres[1] < registres[ri]){
-					i += nc;
-					registres[1] += (registres[0] == 1) ? 1 : -1;
-				}
-				break;
-			case 9://End
-				cout << "Exit" << endl;
-				i = TAILLE_MEMOIRE;
-				return;
-				break;
-			default://Sinon, end
-				cout << "Exit" << endl;
-				i = TAILLE_MEMOIRE;
-				return;
-				break;
->>>>>>> .r28
 		}
 	}	
 }

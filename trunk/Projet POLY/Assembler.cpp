@@ -58,10 +58,8 @@ void parseFile(string inputPath, string outputPath){
 					if (!etq.empty())
 						//S'il y a une etiquette
 						etiquettes[etq] = nbLigne;
+					//cout << "|"+etq+"|" << " " << nbLigne << " " << etiquettes[etq] << endl;
 						//On enregistre dans la table "etiquettes" le numero de ligne associé au nom de l'étiquette
-					
-					cout << etq << " : " << etiquettes[etq] << endl;
-					//Affichage de l'étiquette et de sa position dans la console (tests)
 				}
 			}
 			//Premier parcour du fichier pour enregistrer la position des étiquettes.
@@ -111,32 +109,29 @@ unsigned int convert(string commande,
 	else if (result == 8){
 		//Si le code est "loop"
 		if (!isInt(&rj)){
+			//cout << "|"+rj+"|" << " ";
+			//cout << etiquettes[rj] << endl;
 			int i = etiquettes[rj] - currLine;
 			stringstream iss;
 			iss << i;
-			iss >> rj;
+			iss >> nc;
+			//cout << nc << endl;
 			//rj prend pour valeur la difference entre la ligne actuelle et la ligne
 			//correspondant a l'etiquette
 		}
 	}
 	
-	cout << hex << result << endl;
 	result <<= 3;
 	//Probleme avec l'opcode 0, decalage de 0 = 0
 	//Réglé a l'écriture dans le fichier
-	cout << hex << result << endl;
 	result += regToInt[ri];
 	result <<= 3;
-	cout << hex << result << endl;
 	result += regToInt[rj];
 	result <<= 3;
-	cout << hex << result << endl;
 	result += regToInt[rk];
 	result <<= 8;
-	cout << hex << result << endl;
 	result += (0x000000ff & toInt(nc));
 	result <<= 11;
-	cout << hex << result << endl;
 	//conversion des commandes en int.
 	return result;
 }

@@ -89,18 +89,20 @@ void parseHexa(int inst,
 			   int *nc) {
 	
 	*opcode = (inst & 0xF0000000) >> 28;
-	cout << dec;
-	cout << "Op = " << *opcode;
+	//cout << dec;
+	//cout << "Op = " << *opcode;
 	*ri = (inst & 0x0E000000) >> 25;
-	cout << " ri = " << *ri;
+	//cout << " ri = " << *ri;
 	*rj = (inst & 0x01C00000) >> 22;
-	cout << " rj = " << *rj;
+	//cout << " rj = " << *rj;
 	*rk = (inst & 0x00380000) >> 19;
-	cout << " rk = " << *rk;
+	//cout << " rk = " << *rk;
 	*nc = (inst & 0x0007F800) >> 11;
-	if (*opcode == 0 || *opcode == 8)
-		*nc = ((inst & 0x0007F800) >> 11) | 0xFFFFFF00;
-	cout << " nc = " << *nc << endl;
+	if (*opcode == 0 || *opcode == 8){
+		if ((*nc >> 7) == 1)
+			*nc |= 0xFFFFFF00;
+	}
+	//cout << " nc = " << *nc << endl;
 }
 
 /* La fonction getToken renvoie soit la sous-chaine délimitée par 0 et separator, soit ""
@@ -116,6 +118,7 @@ void getToken(string *line, string *token, char separator){
 		//Si l'on ne trouve rien, i = 0
 		
         *token = line->substr(0, i);
+		trim(token);
 		//On extrait la sous-chaine, "" si i == 0
 		if (i != 0) {
 		//Si i different de 0, on efface la sous-chaine et le separateur de la chaine principale
@@ -127,6 +130,7 @@ void getToken(string *line, string *token, char separator){
 	else {
 	//Si le separateur est '\0', on renvoie toute la chaine.
 		*token = *line;
+		trim(token);
 		line->clear();
 	}
 

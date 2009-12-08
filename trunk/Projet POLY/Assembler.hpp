@@ -4,7 +4,6 @@
 #include <string>
 #include <map>
 
-void parseFile(std::string inputPath, std::string outputPath = "");
 unsigned int convert(std::string commande,
 					 std::string ri,
 					 std::string rj,
@@ -14,6 +13,8 @@ unsigned int convert(std::string commande,
 					 std::map <std::string, int> regToInt,
 					 std::map <std::string, int> etiquettes,
 					 int currLine);
+
+void parseFile(std::string inputPath, std::string outputPath = "");
 int toInt(std::string s);
 
 #endif // ASSEMBLER_HPP
