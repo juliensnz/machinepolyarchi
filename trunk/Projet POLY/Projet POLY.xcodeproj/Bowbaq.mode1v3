@@ -254,8 +254,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -300,6 +298,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>4</integer>
+									<integer>2</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -335,12 +335,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Assembler.hpp</string>
+								<string>Assembler.cpp</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -348,21 +350,21 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Assembler.hpp</string>
+										<string>Assembler.cpp</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>382AFAF710CF873F003E56F1</string>
+										<string>382AFB4910CF9037003E56F1</string>
 										<key>history</key>
 										<array>
 											<string>38E7B22F10C6689E0093EB71</string>
-											<string>38B8FA0D10CCFDF000CD4698</string>
-											<string>38DC46F510CD450C001C63E6</string>
-											<string>38DC470310CE7D1E001C63E6</string>
-											<string>38DC470410CE7D1E001C63E6</string>
-											<string>38DC470510CE7D1E001C63E6</string>
-											<string>38AEB2EC10CE7DC40003A23B</string>
-											<string>38ABB07010CF849300C9A1FD</string>
+											<string>382AFB4210CF9037003E56F1</string>
+											<string>382AFB4310CF9037003E56F1</string>
+											<string>382AFB4410CF9037003E56F1</string>
+											<string>382AFB4510CF9037003E56F1</string>
+											<string>382AFB4610CF9037003E56F1</string>
+											<string>382AFB4710CF9037003E56F1</string>
+											<string>382AFB4810CF9037003E56F1</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -543,7 +545,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>282036031.82131302</real>
+	<real>282038327.30478501</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -560,6 +562,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>382AFB4A10CF9037003E56F1</string>
+		<string>382AFB4B10CF9037003E56F1</string>
+		<string>382AFB4C10CF9037003E56F1</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>3831433E10C9C533001FE6EC</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>388176D410C2B6C700194BED</string>
@@ -587,7 +593,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>Assembler.cpp</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -604,6 +610,8 @@
 							<string>218pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -935,7 +943,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>38DC468A10CD35E0001C63E6</string>
+				<string>382AFAFC10CF8778003E56F1</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

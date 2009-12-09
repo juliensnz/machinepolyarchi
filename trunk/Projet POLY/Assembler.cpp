@@ -9,11 +9,11 @@
 
 using namespace std;
 
-void parseFile(string inputPath, string outputPath){
+bool parseFile(string inputPath, string *outputPath){
 	if (!inputPath.empty()) {
 	//S'il y a un fichier en entrée
-		if (outputPath.empty())
-			outputPath = inputPath + "_asm";
+		if (outputPath->empty())
+			*outputPath = inputPath + "_asm";
 		//Si le chemin de sortie n'est pas spécifié, on crée le fichier dans
 		//le même répertoire, nomSortie = nomEntree_asm
 		
@@ -40,7 +40,7 @@ void parseFile(string inputPath, string outputPath){
 		//Deux dictionnaires de conversion
 		
     	ifstream inputFile(inputPath.c_str(), ios::in);
-    	ofstream outputFile(outputPath.c_str(), ios::out | ios::trunc);
+    	ofstream outputFile(outputPath->c_str(), ios::out | ios::trunc);
 		//Ouverture des deux fichiers, ecrasement de l'eventuel fichier de sortie
 		//préexistant
     	if(inputFile && outputFile){
@@ -82,15 +82,17 @@ void parseFile(string inputPath, string outputPath){
 				}
     	    }
 			//Second parcour du fichier pour traitement
-        inputFile.close();
-        outputFile.close();
-		//Fermeture des deux fichiers
+			inputFile.close();
+			outputFile.close();
+			//Fermeture des deux fichiers
+			return true;
     	}
-    	else
+    	else 
 			cerr << "Echec de l'ouverture / creation d'un des fichiers" << endl;
     }
     else
     	cerr << "Pas de chemin de fichier" << endl;
+	return false;
 }
 
 unsigned int convert(string commande,
