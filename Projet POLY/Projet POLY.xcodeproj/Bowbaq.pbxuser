@@ -86,10 +86,11 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 282035350;
-			PBXWorkspaceStateSaveDate = 282035350;
+			PBXPerProjectTemplateStateSaveDate = 282036019;
+			PBXWorkspaceStateSaveDate = 282036019;
 		};
 		perUserProjectItems = {
+			382AFAF710CF873F003E56F1 /* PBXTextBookmark */ = 382AFAF710CF873F003E56F1 /* PBXTextBookmark */;
 			38ABB07010CF849300C9A1FD = 38ABB07010CF849300C9A1FD /* PBXTextBookmark */;
 			38AEB2EC10CE7DC40003A23B = 38AEB2EC10CE7DC40003A23B /* PBXTextBookmark */;
 			38AEB2ED10CE7DC40003A23B = 38AEB2ED10CE7DC40003A23B /* PBXTextBookmark */;
@@ -112,6 +113,16 @@
 			sepNavWindowFrame = "{{15, 92}, {750, 784}}";
 		};
 	};
+	382AFAF710CF873F003E56F1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 38D4618F10C593CC00AEC496 /* Assembler.hpp */;
+		name = "Assembler.hpp: 20";
+		rLen = 0;
+		rLoc = 506;
+		rType = 0;
+		vrLen = 508;
+		vrLoc = 0;
+	};
 	383143D610C9CE9D001FE6EC /* Interpreter.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1195, 445}}";
@@ -121,9 +132,9 @@
 	};
 	383143D710C9CE9D001FE6EC /* Interpreter.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1195, 1365}}";
-			sepNavSelRange = "{1439, 0}";
-			sepNavVisRange = "{0, 907}";
+			sepNavIntBoundsRect = "{{0, 0}, {691, 1313}}";
+			sepNavSelRange = "{756, 0}";
+			sepNavVisRange = "{0, 1208}";
 			sepNavWindowFrame = "{{15, 92}, {750, 784}}";
 		};
 	};
@@ -196,7 +207,7 @@
 		fRef = 38D4618E10C593CC00AEC496 /* Assembler.cpp */;
 		name = "Assembler.cpp: 118";
 		rLen = 0;
-		rLoc = 3749;
+		rLoc = 3781;
 		rType = 0;
 		vrLen = 1017;
 		vrLoc = 3021;
@@ -223,16 +234,15 @@
 	};
 	38D4618E10C593CC00AEC496 /* Assembler.cpp */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{4332, 38}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 4461}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1195, 1950}}";
-			sepNavSelRange = "{3749, 0}";
-			sepNavVisRange = "{3021, 1017}";
+			sepNavIntBoundsRect = "{{0, 0}, {1195, 2132}}";
+			sepNavSelRange = "{4386, 0}";
+			sepNavVisRange = "{3906, 707}";
 			sepNavWindowFrame = "{{15, 92}, {750, 784}}";
 		};
 	};
 	38D4618F10C593CC00AEC496 /* Assembler.hpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1195, 458}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1195, 452}}";
 			sepNavSelRange = "{506, 0}";
 			sepNavVisRange = "{0, 508}";
 			sepNavWindowFrame = "{{16, 92}, {750, 784}}";
@@ -261,7 +271,7 @@
 		fRef = 383143D710C9CE9D001FE6EC /* Interpreter.cpp */;
 		name = "Interpreter.cpp: 59";
 		rLen = 0;
-		rLoc = 1439;
+		rLoc = 1488;
 		rType = 0;
 		vrLen = 907;
 		vrLoc = 0;
