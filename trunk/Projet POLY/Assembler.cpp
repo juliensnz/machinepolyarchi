@@ -11,6 +11,7 @@ using namespace std;
 
 void parseFile(string inputPath, string outputPath){
 	if (!inputPath.empty()) {
+	//S'il y a un fichier en entrée
 		if (outputPath.empty())
 			outputPath = inputPath + "_asm";
 		//Si le chemin de sortie n'est pas spécifié, on crée le fichier dans
@@ -27,7 +28,7 @@ void parseFile(string inputPath, string outputPath){
 		opcodeToInt["resetlr"] = 7;
 		opcodeToInt["loop"]    = 8;
 		opcodeToInt["end"]     = 9;
-		//tableau associatif de correspondace entre les commandes et leur code opération.
+		//Tableau associatif de correspondance entre les commandes et leur code opération.
 		
 		regToInt[""]   = 0;
 		regToInt["r0"] = 1;
@@ -35,18 +36,18 @@ void parseFile(string inputPath, string outputPath){
 		regToInt["r2"] = 3;
 		regToInt["r3"] = 4;
 		regToInt["r4"] = 5;
-		//tableau associatif entre les différents registres et leur code valeur
+		//Tableau associatif entre les différents registres et leur code valeur
 		//Deux dictionnaires de conversion
 		
     	ifstream inputFile(inputPath.c_str(), ios::in);
     	ofstream outputFile(outputPath.c_str(), ios::out | ios::trunc);
 		//Ouverture des deux fichiers, ecrasement de l'eventuel fichier de sortie
-		//preexistant
+		//préexistant
     	if(inputFile && outputFile){
     	    string line, etq, cmd, ri, rj, rk, nc;
     	    int nbLigne = 0;
 			map <string, int> etiquettes;
-			//Création de la map contenant les étiquètes
+			//Création de la map contenant les étiquettes
 			
 			while (!inputFile.eof()) {
 				getline(inputFile, line);
@@ -54,15 +55,15 @@ void parseFile(string inputPath, string outputPath){
 					//Si la ligne n'est pas vide
 					nbLigne++;
 					getEtiq(&line, &etq);
-					//On récupere l'etiquette eventuelle					
+					//On récupere l'etiquette éventuelle					
 					if (!etq.empty())
 						//S'il y a une etiquette
 						etiquettes[etq] = nbLigne;
-					//cout << "|"+etq+"|" << " " << nbLigne << " " << etiquettes[etq] << endl;
 						//On enregistre dans la table "etiquettes" le numero de ligne associé au nom de l'étiquette
 				}
 			}
-			//Premier parcour du fichier pour enregistrer la position des étiquettes.
+			//Premier parcours du fichier pour enregistrer la position des étiquettes.
+			//On boucle tant qu'on n'est pas à la fin
 			
 			inputFile.clear();
 			inputFile.seekg(0, ios::beg);
@@ -74,14 +75,16 @@ void parseFile(string inputPath, string outputPath){
     	        if (!line.empty()){
 					nbLigne++;
 					parseText(&line, &etq, &cmd, &ri, &rj, &rk, &nc);
-					//parsing de la ligne par la fonction parseText
+					//Parsing de la ligne par la fonction parseText
 					outputFile << "0x" << setfill('0') << setw(8) << hex << convert(cmd, ri, rj, rk, nc, opcodeToInt, regToInt, etiquettes, nbLigne) << endl;
-					//enregistrement dans le fichier de sortie la ligne assemblée.
+					//Enregistrement dans le fichier de sortie de la ligne assemblée.
+					//Completion avec des 0 a gauche, resultat de la forme 0xNNNNNNNN
 				}
     	    }
 			//Second parcour du fichier pour traitement
         inputFile.close();
         outputFile.close();
+		//Fermeture des deux fichiers
     	}
     	else
 			cerr << "Echec de l'ouverture / creation d'un des fichiers" << endl;
@@ -101,23 +104,20 @@ unsigned int convert(string commande,
 					 int currLine){
 	
 	unsigned int result = opcodeToInt[commande];
-	//on initialise le résultat avec le code de la commande
+	//On initialise le résultat avec le code de la commande
 	
 	if (result == 3 && nc.empty())
 		result = 4;
-		//si la commande est pow et que la constante est vide on change le code en powBis
+		//Si la commande est pow et que la constante est vide on change le code en powBis
 	else if (result == 8){
 		//Si le code est "loop"
 		if (!isInt(&rj)){
-			//cout << "|"+rj+"|" << " ";
-			//cout << etiquettes[rj] << endl;
 			int i = etiquettes[rj] - currLine;
 			stringstream iss;
 			iss << i;
 			iss >> nc;
-			//cout << nc << endl;
-			//rj prend pour valeur la difference entre la ligne actuelle et la ligne
-			//correspondant a l'etiquette
+			//rj prend pour valeur la différence entre la ligne actuelle et la ligne
+			//correspondant à l'etiquette
 		}
 	}
 	
@@ -132,10 +132,13 @@ unsigned int convert(string commande,
 	result <<= 8;
 	result += (0x000000ff & toInt(nc));
 	result <<= 11;
-	//conversion des commandes en int.
+	//Conversion de la ligne d'instruction en entier
 	return result;
 }
 
+/* Fonction qui permet de convertir un entier contenu dans une chaine, passée en
+ * paramètre, en entier signé ou non
+ */
 int toInt(string s){
 	int c;
 	if (!s.empty()) {

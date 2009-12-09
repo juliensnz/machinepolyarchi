@@ -11,10 +11,9 @@
 
 using namespace std;
 
-/*
- * La fonction loadMemory se charge de stocker dans un tableau de sting
- * chaque ligne du fichier texte.
- * Elle fait les contrôles et supprime les lignes vides.
+
+/* La fonction loadMemory se charge de stocker dans un tableau d'entiers les
+ * instructions en hexadecimal contenues dans le fichier texte.
  */
 unsigned int* loadMemory(string inputPath){
 	unsigned int* memory = new unsigned int[TAILLE_MEMOIRE];
@@ -25,11 +24,12 @@ unsigned int* loadMemory(string inputPath){
 	if (inputFile){
 		while (getline(inputFile, line) && i < TAILLE_MEMOIRE) {
 			if (!line.empty()){
-				//si la ligne n'est pas vide
+				//Si la ligne n'est pas vide
 				istringstream iss(line);
-				//on initialise un nouveau flux
+				//On initialise un nouveau flux
 				iss >> hex >> memory[i];
-				//on stocke dans le tableau la ligne en la convertissant en hexa.
+				//On stocke dans le tableau la ligne contenant un entier, en faisant
+				//la conversion
 				i++;
 			}
 		}
@@ -38,16 +38,18 @@ unsigned int* loadMemory(string inputPath){
 		cerr << "Erreur à l'ouverture du fichier" << endl;
 	
 	return memory;
+	//On retourne un pointeur vers le tableau
 }
 
 
 void execMemory(unsigned int* memory){
-	int registres[6] = {0};
-	int opcode, ri, rj, rk, nc;
+	char registres[6] = {0};
+	int opcode, ri, rj, rk, nc, i = 0;
 	
-	for (int i = 0; i < TAILLE_MEMOIRE; i++) {
+	while (i < TAILLE_MEMOIRE) {
 		if (memory[i] != 0) {
 			parseHexa(memory[i], &opcode, &ri, &rj, &rk, &nc);
+			i++;
 			switch (opcode) {
 				case 0: //Load ri, c
 					registres[ri] = nc;
@@ -56,7 +58,7 @@ void execMemory(unsigned int* memory){
 					registres[ri] = getInt();
 					break;
 				case 2://Print ri
-					cout << setw(3) << setfill('0') << registres[ri] << endl;
+					cout << setw(3) << setfill('0') << (int)registres[ri] << endl;
 					break;
 				case 3://Pow sur un entier
 					registres[ri] = pow(registres[rj], nc);
@@ -97,7 +99,7 @@ int getInt(){
 	int i = 0;
 	cout << "Veuillez entrer un entier" << endl << "entrée : ";
 	cin >> i;
-	if (i < -255 || i > 255)
+	if (i < -128 || i > 127)
 		return getInt();
 		//si l'entier est trop grand ou trop petit
 	else
