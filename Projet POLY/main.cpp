@@ -23,8 +23,15 @@ using namespace std;
 }*/
 
 int main (int argc, char * const argv[]) {
-	
-	parseFile("test.txt");
-	execMemory(loadMemory("test.txt_asm"));
+	string input = "", output = "";
+	cout << "Veuillez entrer le chemin du fichier à assembler" << endl;
+	getline(cin, input, '\n');
+	cout << "Veuillez entrer le chemin du fichier de sortie" << endl;
+	getline(cin, output, '\n');
+	if (parseFile(input, &output))
+		execMemory(loadMemory(output));
+	else
+		cout << "Erreur à l'assemblage du fichier texte" << endl << "Fin du programme" << endl;
+
     return 0;
 }

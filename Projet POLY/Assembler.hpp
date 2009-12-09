@@ -14,7 +14,7 @@ unsigned int convert(std::string commande,
 					 std::map <std::string, int> etiquettes,
 					 int currLine);
 
-void parseFile(std::string inputPath, std::string outputPath = "");
+bool parseFile(std::string inputPath, std::string *outputPath);
 int toInt(std::string s);
 
 #endif // ASSEMBLER_HPP
