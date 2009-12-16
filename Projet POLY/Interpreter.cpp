@@ -34,9 +34,11 @@ unsigned int* loadMemory(string inputPath){
 			}
 		}
 	}
-	else
+	else{
 		cerr << "Erreur à l'ouverture du fichier" << endl;
-	
+		memory[0] = 0x90000000; 
+		//Instruction de fin de programme dans la première case
+	}	
 	return memory;
 	//On retourne un pointeur vers le tableau
 }
