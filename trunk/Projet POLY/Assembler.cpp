@@ -9,7 +9,7 @@
 
 using namespace std;
 
-bool parseFile(string inputPath, string *outputPath){
+bool translateFile(string inputPath, string *outputPath){
 	if (!inputPath.empty()) {
 	//S'il y a un fichier en entrée
 		if (outputPath->empty())
@@ -113,7 +113,7 @@ unsigned int convert(string commande,
 		//Si la commande est pow et que la constante est vide on change le code en powBis
 	else if (result == 8){
 		//Si le code est "loop"
-		if (!isInt(&rj)){
+		if (!rj.empty()){
 			int i = etiquettes[rj] - currLine;
 			stringstream iss;
 			iss << i;
@@ -133,16 +133,14 @@ unsigned int convert(string commande,
 	result += regToInt[rk];
 	result <<= 8;
 	result += (0x000000ff & toInt(nc));
+	//On ne garde que 8 bit sur la constante.
 	result <<= 11;
 	//Conversion de la ligne d'instruction en entier
 	return result;
 }
 
-/* Fonction qui permet de convertir un entier contenu dans une chaine, passée en
- * paramètre, en entier signé ou non
- */
 int toInt(string s){
-	int c;
+	int c = 0;
 	if (!s.empty()) {
 		istringstream iss (s);
 		if (s[0] == '-'){
@@ -153,7 +151,7 @@ int toInt(string s){
 			(unsigned int) c;
 			iss >> c;
 		}
-		return c;
+		c = (iss.eof()) ? c : 0;
 	}
-	else return 0;
+	return c;
 }

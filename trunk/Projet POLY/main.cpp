@@ -28,7 +28,7 @@ int main (int argc, char * const argv[]) {
 	getline(cin, input, '\n');
 	cout << "Veuillez entrer le chemin du fichier de sortie" << endl;
 	getline(cin, output, '\n');
-	if (parseFile(input, &output))
+	if (translateFile(input, &output))
 		execMemory(loadMemory(output));
 	else
 		cout << "Erreur à l'assemblage du fichier texte" << endl << "Fin du programme" << endl;

@@ -4,10 +4,6 @@
 
 using namespace std;
 
-/* La fonction parse permet de parser une chaine d'instruction,
- * et d'en récuperer les elements via les arguments.
- * La chaine instruction passée en argument est détruite par l'opération.
- */ 
 void parseText(string *instruction,
 		   string *etiquette,
 		   string *commande,
@@ -42,7 +38,7 @@ void parseText(string *instruction,
 		 * on vide les autre parametres et on quitte la fonction.
 		 */
 			*commande = *rk;
-            ri->clear(); rj->clear(); rk->clear(); nc->clear();
+            instruction->clear(); ri->clear(); rj->clear(); rk->clear(); nc->clear();
             return;
         }
         if (ri->empty()) {
@@ -50,14 +46,14 @@ void parseText(string *instruction,
 		 * On copie alors rk dans ri, et on vide les autres parametre et on quitte
 		 */
             *ri = *rk;
-            rj->clear(); rk->clear(); nc->clear();
+            instruction->clear(); rj->clear(); rk->clear(); nc->clear();
             return;
         }
 		// Si on arrive ici, on a une instruction de type cmd ri, rj [, rk]
 		if (isInt(rk)) {
 		//On teste si rk contient un entier
             *nc = *rk;
-			//Si oui on le copie dans nc
+ 			//Si oui on le copie dans nc
             rk->clear();
 			//Et on vide rk
         }
@@ -87,29 +83,22 @@ void parseHexa(int inst,
 			   int *rj,
 			   int *rk,
 			   int *nc) {
-	
+	//On récupère chacun des paramètres par un jeu de masques logiques et de 
+	//décalages.
 	*opcode = (inst & 0xF0000000) >> 28;
-	//cout << dec;
-	//cout << "Op = " << *opcode;
-	*ri = (inst & 0x0E000000) >> 25;
-	//cout << " ri = " << *ri;
-	*rj = (inst & 0x01C00000) >> 22;
-	//cout << " rj = " << *rj;
-	*rk = (inst & 0x00380000) >> 19;
-	//cout << " rk = " << *rk;
-	*nc = (inst & 0x0007F800) >> 11;
+	*ri		= (inst & 0x0E000000) >> 25;
+	*rj		= (inst & 0x01C00000) >> 22;
+	*rk		= (inst & 0x00380000) >> 19;
+	*nc		= (inst & 0x0007F800) >> 11;
 	if (*opcode == 0 || *opcode == 8){
+	//Pour les opérations impliquant une constante signée
 		if ((*nc >> 7) == 1)
+		//Si le bit de poids fort est à 1 (= entier signé)
 			*nc |= 0xFFFFFF00;
+			//On force les 28 bits de poids fort de la constante à 1	
 	}
-	//cout << " nc = " << *nc << endl;
 }
 
-/* La fonction getToken renvoie soit la sous-chaine délimitée par 0 et separator, soit ""
- * Si une sous-chaine est trouvée, on la retire de la ligne passée en argument
- * Ex: getToken("aaaa,bbb", &token, ',') aura pour resultat token == "aaaa" et line == "bbb"
- * Si le separateur est '\0', on renvoie toute la ligne
- */
 void getToken(string *line, string *token, char separator){
 	if (separator != '\0') {
 	//Si le separateur n'est pas '\0'
@@ -135,46 +124,38 @@ void getToken(string *line, string *token, char separator){
 	}
 
 }
-// Adaptation réduite de la fonction parse, qui ne récupere que l'etiquette
+
 void getEtiq(string *line, string *etiquette){
 	unComment(line);
+	//On enleve les commentaires
 	trim(line);
+	//On enleve les espaces
 	getToken(line, etiquette, ':');
+	//On recupere l'etiquette
 	line->clear();
+	//On vide la ligne
 }
 
-/* Fonction dédiée à la suppression des eventuels commentaires
- * Si on trouve un ';', on renvoie la sous chaine délimitée par
- * le début et le ';'. Si la méthode find renvoie string::npos, 
- * le caractère ';' n'est pas dans la chaine et on renvoie alors
- * toute la chaine.
- */
 void unComment(string *line){
 	*line = line->substr(0, ((line->find(';') != string::npos) ? line->find(';') : line->size()));
+	//On récupère la sous chaine a gauche du premier ';',
+	//Toute la ligne s'il n'y a pas de ';'
 }
 
-/* Fonction dédiée à la suppression des espaces supperflus en début
- * et en fin de chaine. 
- * Par espaces, on entend les espaces, les tabulations, ...
- * On renvoie la sous-chaine délimitée par le premier non-espace
- * et le dernier non espace. Les espaces à l'intérieur de la chaine
- * ne sont pas concernés.
- */
 void trim(string *line){
     if (!line->empty()){
         const char *separator = " \t\r\n";
         size_t i, j;
 
         i = line->find_first_not_of(separator);
+		//Index du premier non espace
         j = line->find_last_not_of(separator) - i + 1;
+		//Longueur de la chaine jusqu'au dernier non espace
         *line = line->substr(i, j);
+		//On extrait la sous-chaine délimitée par i et j
     }
 }
 
-/* Cette fonction renvoie True si la chaine contient un entier (relatif)
- * False sinon. On travaille sur une copie de la chaine, elle n'est donc pas
- * altérée par l'opération.
- */
 bool isInt(string *s){
 	string str =  *s;
 	int test;
